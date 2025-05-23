@@ -38,13 +38,14 @@
         return gk_fileData[filename] || "";
         }
         </script><!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saudi Aramco (2222) Stock Analysis Report</title>
-    <style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saudi Aramco (2222) Stock Analysis Report</title>
+<style>
         body {
             font-family: 'Poppins', sans-serif;
             max-width: 1200px;
@@ -66,6 +67,7 @@
         canvas {
             max-width: 100%;
             height: 1000px;
+        }
             margin: 20px 0;
         }
         .download-btn {
@@ -94,95 +96,98 @@
                 padding: 15px;
             }
         }
-    </style>
+    
+        @media (max-width: 768px) {
+            canvas {
+                height: 1200px;
+            }
+        }
+    
+        .overview-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        </style>
 </head>
 <body>
-    <h1 style="text-align:center;">Saudi Aramco (2222) Stock Analysis Report</h1>
-    
-    <div class="section">
-        <h2>Overview</h2>
-        <img src="https://companieslogo.com/img/orig/ARAMCO.SR_BIG-3a8e373f.png?t=1633519007" alt="Aramco Logo" style="max-width:150px;margin-bottom:20px;">
-        <p>Saudi Aramco, the world’s leading oil and gas company, excels in production and dividends, making it a cornerstone for energy and income-focused portfolios. This report summarizes Aramco’s performance, news, sentiment, and outlook, supported by 18 dynamic charts to guide your investment decisions.</p>
-        <p class="disclaimer"><strong>Disclaimer</strong>: This report is for informational purposes only and not financial advice. Investing involves risks, including potential loss of capital. Consult a financial advisor before making decisions.</p>
-    </div>
-
-    <div class="section">
-        <h2>1. Recent Performance</h2>
-        <p><strong>Summary</strong>: Aramco’s stock price is SAR 26.20, up 0.38% daily but down 10.9% year-to-date, trailing the Tadawul All Share Index (TASI, -4.96% YTD). Q1 2025 net income dropped 4.6% to SAR 97.54 billion, but revenue (SAR 405.65 billion) exceeded estimates, showing resilience amid low oil prices (~$70/barrel).</p>
-        <p><strong>Key Metrics</strong>:</p>
-        <ul>
-            <li><strong>Market Cap</strong>: SAR 6.31 trillion ($1.68 trillion USD)</li>
-            <li><strong>52-Week Range</strong>: SAR 24.88–33.30</li>
-            <li><strong>EPS</strong>: SAR 0.40 (Q1 2025)</li>
-            <li><strong>Free Cash Flow</strong>: SAR 19.2 billion, down 15.8% YoY</li>
-        </ul>
-        <canvas id="chart1_1"></canvas>
-        <canvas id="chart1_2"></canvas>
-        <canvas id="chart1_3"></canvas>
-    </div>
-
-    <div class="section">
-        <h2>2. News Impact</h2>
-        <p><strong>Summary</strong>: Q1 2025 profits fell 4.6% to SAR 97.54 billion, with dividends cut to SAR 85.4 billion from SAR 124.2 billion. OPEC+ increased output by 411,000 bpd, potentially dropping Brent to $60/barrel. U.S. tariffs reduced Aramco’s value by SAR 350 billion, but $90 billion in U.S. AI/energy deals and a BYD EV partnership signal growth.</p>
-        <canvas id="chart2_1"></canvas>
-        <canvas id="chart2_2"></canvas>
-        <canvas id="chart2_3"></canvas>
-    </div>
-
-    <div class="section">
-        <h2>3. Sentiment Analysis</h2>
-        <p><strong>Summary</strong>: X sentiment is mixed: 40% positive (praising 7% dividend yield), 35% negative (citing dividend cuts), and 25% neutral (focusing on AI). Analysts rate Aramco a “Buy” (1.50/5, 27 analysts) with a SAR 69.00 target (163% upside), despite TASI’s bearish mood (-4.96% YTD).</p>
-        <canvas id="chart3_1"></canvas>
-        <canvas id="chart3_2"></canvas>
-        <canvas id="chart3_3"></canvas>
-    </div>
-
-    <div class="section">
-        <h2>4. Fundamental Analysis</h2>
-        <p><strong>Summary</strong>: Aramco’s 7% dividend yield and SAR 866.62 billion EBITDA (48.72% margin) reflect financial strength, but a P/E ratio of 16 (vs. sector 10) and 12% net income decline (SAR 106.2 billion in 2024) show oil price challenges. Analysts target SAR 69.00, implying 163% upside.</p>
-        <p><strong>Key Metrics</strong>:</p>
-        <ul>
-            <li><strong>Dividend Yield</strong>: 7% (SAR 1.82/share)</li>
-            <li><strong>EPS (TTM)</strong>: SAR 1.60</li>
-            <li><strong>Revenue (Q1 2025)</strong>: SAR 405.65 billion</li>
-            <li><strong>Risks</strong>: Low oil prices, dividend cuts, Vision 2030 costs</li>
-        </ul>
-        <canvas id="chart4_1"></canvas>
-        <canvas id="chart4_2"></canvas>
-        <canvas id="chart4_3"></canvas>
-    </div>
-
-    <div class="section">
-        <h2>5. Technical Analysis</h2>
-        <p><strong>Summary</strong>: At SAR 26.20, Aramco’s stock is in a downtrend but nearing support (SAR 23.90–25.50), with resistance at SAR 26.90–27.55. A Strong Buy signal, 3.37% volatility, and 0.50 beta suggest stability and potential upside.</p>
-        <p><strong>Key Metrics</strong>:</p>
-        <ul>
-            <li><strong>Trade Idea</strong>: Buy at SAR 23.90–25.50, target SAR 27.55, stop loss SAR 23.00</li>
-            <li><strong>Volatility</strong>: 3.37%</li>
-            <li><strong>Beta</strong>: 0.50</li>
-        </ul>
-        <canvas id="chart5_1"></canvas>
-        <canvas id="chart5_2"></canvas>
-        <canvas id="chart5_3"></canvas>
-    </div>
-
-    <div class="section">
-        <h2>6. Predictive Analytics</h2>
-        <p><strong>Summary</strong>: Brent oil prices may drop to $60/barrel in 2025 and $56/barrel in 2026, impacting revenue. OPEC+ output increases (411,000 bpd in June 2025) add pressure, but AI, gas, and Downstream initiatives could add SAR 17–20 billion in cash flow by 2030. August 2025 earnings (EPS SAR 0.38) may drive gains, with analysts targeting SAR 69.00.</p>
-        <canvas id="chart6_1"></canvas>
-        <canvas id="chart6_2"></canvas>
-        <canvas id="chart6_3"></canvas>
-    </div>
-
-    <div class="section">
-        <h2>Conclusion</h2>
-        <p>Aramco’s stock, at SAR 26.20, is down 10.9% YTD due to low oil prices ($70/barrel) and a dividend cut to SAR 85.4 billion. Its 7% dividend yield, Q1 2025 profits (SAR 97.54 billion), and AI/gas investments support its value, with analysts targeting SAR 69.00 (163% upside). The 18 charts clarify performance, news, sentiment, financials, technicals, and forecasts to inform your strategy.</p>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script>
+<h1 style="text-align:center;">Saudi Aramco (2222) Stock Analysis Report</h1>
+<div class="section">
+<div class="overview-header"><h2>Overview</h2><img alt="Aramco Logo" src="https://www.jobkase.com/media/Company/C46/saudi_aramco_logo-freelogovectors.net_202108291603433699.png" style="max-width:150px;margin-left:auto;"/></div>
+<img alt="Aramco Logo" src="https://www.jobkase.com/media/Company/C46/saudi_aramco_logo-freelogovectors.net_202108291603433699.png" style="max-width:150px;margin-bottom:20px;"/>
+<p>Saudi Aramco, the world’s leading oil and gas company, excels in production and dividends, making it a cornerstone for energy and income-focused portfolios. This report summarizes Aramco’s performance, news, sentiment, and outlook, supported by 18 dynamic charts to guide your investment decisions.</p>
+<p class="disclaimer"><strong>Disclaimer</strong>: This report is for informational purposes only and not financial advice. Investing involves risks, including potential loss of capital. Consult a financial advisor before making decisions.</p>
+</div>
+<div class="section">
+<h2>1. Recent Performance</h2>
+<p><strong>Summary</strong>: Aramco’s stock price is SAR 26.20, up 0.38% daily but down 10.9% year-to-date, trailing the Tadawul All Share Index (TASI, -4.96% YTD). Q1 2025 net income dropped 4.6% to SAR 97.54 billion, but revenue (SAR 405.65 billion) exceeded estimates, showing resilience amid low oil prices (~$70/barrel).</p>
+<p><strong>Key Metrics</strong>:</p>
+<ul>
+<li><strong>Market Cap</strong>: SAR 6.31 trillion ($1.68 trillion USD)</li>
+<li><strong>52-Week Range</strong>: SAR 24.88–33.30</li>
+<li><strong>EPS</strong>: SAR 0.40 (Q1 2025)</li>
+<li><strong>Free Cash Flow</strong>: SAR 19.2 billion, down 15.8% YoY</li>
+</ul>
+<canvas id="chart1_1"></canvas>
+<canvas id="chart1_2"></canvas>
+<canvas id="chart1_3"></canvas>
+</div>
+<div class="section">
+<h2>2. News Impact</h2>
+<p><strong>Summary</strong>: Q1 2025 profits fell 4.6% to SAR 97.54 billion, with dividends cut to SAR 85.4 billion from SAR 124.2 billion. OPEC+ increased output by 411,000 bpd, potentially dropping Brent to $60/barrel. U.S. tariffs reduced Aramco’s value by SAR 350 billion, but $90 billion in U.S. AI/energy deals and a BYD EV partnership signal growth.</p>
+<canvas id="chart2_1"></canvas>
+<canvas id="chart2_2"></canvas>
+<canvas id="chart2_3"></canvas>
+</div>
+<div class="section">
+<h2>3. Sentiment Analysis</h2>
+<p><strong>Summary</strong>: X sentiment is mixed: 40% positive (praising 7% dividend yield), 35% negative (citing dividend cuts), and 25% neutral (focusing on AI). Analysts rate Aramco a “Buy” (1.50/5, 27 analysts) with a SAR 69.00 target (163% upside), despite TASI’s bearish mood (-4.96% YTD).</p>
+<canvas id="chart3_1"></canvas>
+<canvas id="chart3_2"></canvas>
+<canvas id="chart3_3"></canvas>
+</div>
+<div class="section">
+<h2>4. Fundamental Analysis</h2>
+<p><strong>Summary</strong>: Aramco’s 7% dividend yield and SAR 866.62 billion EBITDA (48.72% margin) reflect financial strength, but a P/E ratio of 16 (vs. sector 10) and 12% net income decline (SAR 106.2 billion in 2024) show oil price challenges. Analysts target SAR 69.00, implying 163% upside.</p>
+<p><strong>Key Metrics</strong>:</p>
+<ul>
+<li><strong>Dividend Yield</strong>: 7% (SAR 1.82/share)</li>
+<li><strong>EPS (TTM)</strong>: SAR 1.60</li>
+<li><strong>Revenue (Q1 2025)</strong>: SAR 405.65 billion</li>
+<li><strong>Risks</strong>: Low oil prices, dividend cuts, Vision 2030 costs</li>
+</ul>
+<canvas id="chart4_1"></canvas>
+<canvas id="chart4_2"></canvas>
+<canvas id="chart4_3"></canvas>
+</div>
+<div class="section">
+<h2>5. Technical Analysis</h2>
+<p><strong>Summary</strong>: At SAR 26.20, Aramco’s stock is in a downtrend but nearing support (SAR 23.90–25.50), with resistance at SAR 26.90–27.55. A Strong Buy signal, 3.37% volatility, and 0.50 beta suggest stability and potential upside.</p>
+<p><strong>Key Metrics</strong>:</p>
+<ul>
+<li><strong>Trade Idea</strong>: Buy at SAR 23.90–25.50, target SAR 27.55, stop loss SAR 23.00</li>
+<li><strong>Volatility</strong>: 3.37%</li>
+<li><strong>Beta</strong>: 0.50</li>
+</ul>
+<canvas id="chart5_1"></canvas>
+<canvas id="chart5_2"></canvas>
+<canvas id="chart5_3"></canvas>
+</div>
+<div class="section">
+<h2>6. Predictive Analytics</h2>
+<p><strong>Summary</strong>: Brent oil prices may drop to $60/barrel in 2025 and $56/barrel in 2026, impacting revenue. OPEC+ output increases (411,000 bpd in June 2025) add pressure, but AI, gas, and Downstream initiatives could add SAR 17–20 billion in cash flow by 2030. August 2025 earnings (EPS SAR 0.38) may drive gains, with analysts targeting SAR 69.00.</p>
+<canvas id="chart6_1"></canvas>
+<canvas id="chart6_2"></canvas>
+<canvas id="chart6_3"></canvas>
+</div>
+<div class="section">
+<h2>Conclusion</h2>
+<p>Aramco’s stock, at SAR 26.20, is down 10.9% YTD due to low oil prices ($70/barrel) and a dividend cut to SAR 85.4 billion. Its 7% dividend yield, Q1 2025 profits (SAR 97.54 billion), and AI/gas investments support its value, with analysts targeting SAR 69.00 (163% upside). The 18 charts clarify performance, news, sentiment, financials, technicals, and forecasts to inform your strategy.</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
         const { jsPDF } = window.jspdf;
 
         // Function to handle click events on charts
